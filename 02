@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ARRAY EM ORDEM DECRESCENTE
+    Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
+    Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
+    */
+
+    //ENTRADA
+    const nUm = Number(prompt(`Insira um numero`));
+    const nDois = Number(prompt(`Insira outro numero`));
+    const nTres = Number(prompt(`Insira outro numero`));
+    let descrescente 
+
+    //PROCESSAMENTO
+    if (nUm > nDois && nUm > nTres){
+        (nDois > nTres)? descrescente = [nUm,nDois,nTres]:descrescente = [nUm,nTres,nDois];
+    }
+    else if (nDois > nUm && nDois > nTres){
+        (nUm > nTres)? descrescente = [nDois,nUm,nTres]:descrescente = [nDois,nTres,nUm];
+    }
+    else {
+        (nUm > nDois)? descrescente = [nTres,nUm,nDois]:descrescente = [nTres,nDois,nUm];
+    }
+    
+    //SAÍDA
+    alert(descrescente)
+</script>
